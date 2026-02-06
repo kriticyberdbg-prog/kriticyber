@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kriti Cyber & Stationery - सभी सरकारी ऑनलाइन सेवाएं एक ही जगह। आधार सेवाएं, जाति प्रमाण पत्र, पैन कार्ड, ई-श्रम कार्ड और स्टेशनरी।">
+    <meta name="keywords" content="cyber cafe, aadhaar services, government services, stationery, online form, caste certificate, pan card, kriti cyber, bihar cyber cafe">
+    <meta name="author" content="Kriti Cyber & Stationery">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a56db">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kriti Cyber & Stationery">
+    <meta property="og:description" content="सभी सरकारी ऑनलाइन सेवाएं एक ही जगह - आधार से पैसा निकासी व जमा">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hi_IN">
+
+    <title>Kriti Cyber & Stationery | सभी सरकारी ऑनलाइन सेवाएं</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==================== CSS VARIABLES ==================== */
+        :root {
+            --primary-blue: #1a56db;
+            --primary-blue-dark: #1e40af;
+            --primary-blue-light: #3b82f6;
+            --accent-yellow: #fbbf24;
+            --accent-yellow-dark: #f59e0b;
+            --accent-yellow-light: #fcd34d;
+            --white: #ffffff;
+            --off-white: #f8fafc;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --success-green: #10b981;
+            --whatsapp-green: #25d366;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s ease;
+            --font-hindi: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* ==================== RESET & BASE ==================== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+	
+        body {
+            font-family: var(--font-hindi);
+            background: var(--off-white);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==================== NAVIGATION ==================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            padding: 10px 18px;
+            font-weight: 500;
+            color: var(--gray-700);
+            border-radius: 8px;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+        }
+
+        .nav-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--primary-blue);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-badge i {
+            color: var(--accent-yellow);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease 0.1s backwards;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            opacity: 0.95;
+            margin-bottom: 30px;
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-yellow-dark));
+            color: var(--gray-900);
+            padding: 18px 35px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(251, 191, 36, 0.4);
+            animation: pulse 2s ease-in-out infinite, fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        .hero-highlight i {
+            font-size: 1.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: var(--font-hindi);
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-blue);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            background: #22c55e;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.5s backwards;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-yellow);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* ==================== SECTION STYLES ==================== */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ==================== SERVICES SECTION ==================== */
+        #services {
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 2px solid var(--gray-100);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-yellow));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* ==================== AADHAAR SECTION ==================== */
+        #aadhaar {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #aadhaar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: var(--accent-yellow);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        #aadhaar .section-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        #aadhaar .section-title {
+            color: var(--white);
+        }
+
+        #aadhaar .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .aadhaar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .aadhaar-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .aadhaar-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .aadhaar-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-yellow-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 36px;
+            color: var(--gray-900);
+            box-shadow: 0 10px 40px rgba(251, 191, 36, 0.3);
+        }
+
+        .aadhaar-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .aadhaar-card p {
+            opacity: 0.85;
+            font-size: 1rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 12px;
+        }
+
+        .trust-badge i {
+            font-size: 1.5rem;
+            color: var(--accent-yellow);
+        }
+
+        /* ==================== STATIONERY SECTION ==================== */
+        #stationery {
+            background: var(--gray-50);
+        }
+
+        .stationery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .stationery-item {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .stationery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-yellow);
+        }
+
+        .stationery-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-yellow-light), var(--accent-yellow));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+            color: var(--gray-800);
+        }
+
+        .stationery-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .guess-papers {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .guess-papers h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .guess-papers h3 i {
+            color: var(--primary-blue);
+        }
+
+        .class-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .class-tag {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .class-tag:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ==================== CONTACT SECTION ==================== */
+        #contact {
+            background: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            border-radius: 24px;
+            padding: 40px;
+            color: var(--white);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-item a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .contact-btn.call {
+            background: var(--accent-yellow);
+            color: var(--gray-900);
+        }
+
+        .contact-btn.whatsapp {
+            background: var(--whatsapp-green);
+            color: var(--white);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-form-wrapper {
+            background: var(--gray-50);
+            border-radius: 24px;
+            padding: 40px;
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: var(--font-hindi);
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 4px rgba(26, 86, 219, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-hindi);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .map-container {
+            margin-top: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-600);
+        }
+
+        .map-placeholder i {
+            font-size: 48px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent-yellow);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray-300);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--gray-400);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--gray-800);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        /* ==================== FLOATING BUTTONS ==================== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .float-btn.call {
+            background: var(--primary-blue);
+        }
+
+        .float-btn.whatsapp {
+            background: var(--whatsapp-green);
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .float-btn.whatsapp:hover {
+            animation: shake 0.5s ease;
+        }
+
+        /* ==================== SCROLL TO TOP ==================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: none;
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: scale(1.1) rotate(0);
+            }
+
+            25% {
+                transform: scale(1.1) rotate(-5deg);
+            }
+
+            75% {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE DESIGN ==================== */
+        @media (max-width: 1024px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 74px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: var(--transition);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-highlight {
+                font-size: 1.1rem;
+                padding: 15px 25px;
+            }
+
+            .hero-stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .float-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+
+            .scroll-top {
+                bottom: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .trust-badges {
+                gap: 20px;
+            }
+
+            .trust-badge {
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text h1 {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .stationery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .class-tags {
+                justify-content: center;
+            }
+
+            .contact-info,
+            .contact-form-wrapper {
+                padding: 25px;
+            }
+        }
+
+        /* ==================== LOADING ANIMATION ==================== */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loader-wrapper.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .loader-icon {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top-color: var(--accent-yellow);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <div class="loader-icon"></div>
+            <h2>Kriti Cyber & Stationery</h2>
+            <p>लोड हो रहा है...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">KC</div>
+                <div class="logo-text">
+                    <h1>Kriti Cyber & Stationery</h1>
+                    <span>सभी सरकारी सेवाएं एक ही जगह</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">होम</a></li>
+                <li><a href="#services" class="nav-link">सेवाएं</a></li>
+                <li><a href="#aadhaar" class="nav-link">आधार सेवाएं</a></li>
+                <li><a href="#stationery" class="nav-link">स्टेशनरी</a></li>
+                <li><a href="#contact" class="nav-link">संपर्क करें</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                <span>विश्वसनीय सेवा प्रदाता</span>
+            </div>
+            <h1>Kriti Cyber & Stationery</h1>
+            <p class="hero-subtitle">सभी सरकारी ऑनलाइन सेवाएं एक ही जगह</p>
+            <div class="hero-highlight">
+                <i class="fas fa-fingerprint"></i>
+                <span>Aadhaar से पैसा निकासी व जमा</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="tel:7004320678" class="btn btn-primary">
+                    <i class="fas fa-phone-alt"></i>
+                    Call Now
+                </a>
+                <a href="https://wa.me/917004320678?text=नमस्ते! मुझे आपकी सेवाओं के बारे में जानकारी चाहिए।" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp करें
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">संतुष्ट ग्राहक</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">सेवाएं उपलब्ध</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">सुरक्षित सेवा</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    हमारी सेवाएं
+                </span>
+                <h2 class="section-title">सरकारी ऑनलाइन सेवाएं</h2>
+                <p class="section-subtitle">सभी प्रकार के सरकारी दस्तावेज़ और ऑनलाइन सेवाएं एक ही जगह पर उपलब्ध</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>जाति प्रमाण पत्र</h3>
+                    <p>Caste Certificate बनवाने की सुविधा</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>आवासीय प्रमाण पत्र</h3>
+                    <p>Residential Certificate सेवा</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>आय प्रमाण पत्र</h3>
+                    <p>Income Certificate बनवाएं</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>पैन कार्ड</h3>
+                    <p>नया PAN Card बनवाएं या सुधार करें</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-address-card"></i>
+                    </div>
+                    <h3>पहचान पत्र</h3>
+                    <p>Voter ID Card सेवाएं</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>ई-श्रम कार्ड</h3>
+                    <p>E-Shram Card Registration</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>किसान पंजीयन</h3>
+                    <p>Kisan Registration & Services</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3>आधार कार्ड प्रिंट</h3>
+                    <p>Aadhaar Card Print & Download</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <h3>फोटो स्टेट</h3>
+                    <p>Photocopy & Printing Services</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>लेमिनेशन</h3>
+                    <p>Lamination Service उपलब्ध</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>ऑनलाइन फॉर्म भरना</h3>
+                    <p>All Online Forms Filling</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>कंप्यूटर सेवाएं</h3>
+                    <p>Internet & Computer Services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aadhaar Section -->
+    <section class="section" id="aadhaar">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">
+                    <i class="fas fa-fingerprint"></i>
+                    AEPS Services
+                </span>
+                <h2 class="section-title">आधार सेवाएं</h2>
+                <p class="section-subtitle">आधार कार्ड से पैसे निकालें और जमा करें - सुरक्षित और भरोसेमंद</p>
+            </div>
+            <div class="aadhaar-grid">
+                <div class="aadhaar-card fade-in">
+                    <div class="aadhaar-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>पैसा निकासी</h3>
+                    <p>आधार कार्ड से तुरंत पैसे निकालें। बैंक जाने की जरूरत नहीं।</p>
+                </div>
+                <div class="aadhaar-card fade-in">
+                    <div class="aadhaar-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>पैसा जमा</h3>
+                    <p>आधार कार्ड से अपने बैंक खाते में पैसे जमा करें।</p>
+                </div>
+                <div class="aadhaar-card fade-in">
+                    <div class="aadhaar-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>बैलेंस चेक</h3>
+                    <p>अपने बैंक खाते का बैलेंस तुरंत चेक करें।</p>
+                </div>
+            </div>
+            <div class="trust-badges fade-in">
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Secure</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>Authorized Agent</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-clock"></i>
+                    <span>Instant Service</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Trusted by 5000+ Customers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stationery Section -->
+    <section class="section" id="stationery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">
+                    <i class="fas fa-pencil-alt"></i>
+                    स्टेशनरी
+                </span>
+                <h2 class="section-title">स्टेशनरी की दुकान</h2>
+                <p class="section-subtitle">स्कूल और ऑफिस के लिए सभी प्रकार की स्टेशनरी उपलब्ध</p>
+            </div>
+            <div class="stationery-grid">
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>नोट / Notebook</h3>
+                </div>
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <h3>पेन / Pen</h3>
+                </div>
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>पेंसिल / Pencil</h3>
+                </div>
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>कॉपी / Copy</h3>
+                </div>
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>BTC किताब</h3>
+                </div>
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-eraser"></i>
+                    </div>
+                    <h3>रबर / Eraser</h3>
+                </div>
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-ruler"></i>
+                    </div>
+                    <h3>स्केल / Scale</h3>
+                </div>
+                <div class="stationery-item fade-in">
+                    <div class="stationery-icon">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <h3>फाइल / File</h3>
+                </div>
+            </div>
+            <div class="guess-papers fade-in">
+                <h3>
+                    <i class="fas fa-file-alt"></i>
+                    Guess Papers उपलब्ध
+                </h3>
+                <div class="class-tags">
+                    <span class="class-tag">Class I</span>
+                    <span class="class-tag">Class II</span>
+                    <span class="class-tag">Class III</span>
+                    <span class="class-tag">Class IV</span>
+                    <span class="class-tag">Class V</span>
+                    <span class="class-tag">Class VI</span>
+                    <span class="class-tag">Class VII</span>
+                    <span class="class-tag">Class VIII</span>
+                    <span class="class-tag">Class IX</span>
+                    <span class="class-tag">Class X</span>
+                    <span class="class-tag">Class XI</span>
+                    <span class="class-tag">Class XII</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    संपर्क करें
+                </span>
+                <h2 class="section-title">हमसे संपर्क करें</h2>
+                <p class="section-subtitle">किसी भी सेवा के लिए कॉल करें या WhatsApp करें</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <h3>संपर्क जानकारी</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <a href="tel:7004320678">7004320678</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <a href="tel:8229055016">8229055016</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <a href="tel:8210480583">8210480583</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/917004320678" target="_blank">WhatsApp पर मैसेज करें</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <span>सुबह 9:00 - रात 9:00</span>
+                        </div>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="tel:7004320678" class="contact-btn call">
+                            <i class="fas fa-phone-alt"></i>
+                            Call करें
+                        </a>
+                        <a href="https://wa.me/917004320678?text=नमस्ते! मुझे आपकी सेवाओं के बारे में जानकारी चाहिए।" target="_blank" class="contact-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper fade-in">
+                    <h3>मैसेज भेजें</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">आपका नाम *</label>
+                            <input type="text" id="name" name="name" placeholder="अपना नाम लिखें" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">मोबाइल नंबर *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="10 अंक का नंबर" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">कौन सी सेवा चाहिए?</label>
+                            <input type="text" id="service" name="service" placeholder="जैसे: आधार कार्ड, पैन कार्ड आदि">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">संदेश</label>
+                            <textarea id="message" name="message" placeholder="अपना संदेश यहां लिखें..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            मैसेज भेजें
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-container fade-in">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Kriti Cyber & Stationery</h3>
+                    <p>हमारी दुकान का Google Map यहां दिखेगा</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Kriti Cyber & Stationery</h4>
+                    <p>सभी सरकारी ऑनलाइन सेवाएं एक ही जगह। आधार सेवाएं, प्रमाण पत्र, पैन कार्ड और स्टेशनरी के लिए हमसे संपर्क करें।</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/917004320678" class="social-link" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:7004320678" class="social-link" aria-label="Phone">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>हमारी सेवाएं</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> जाति प्रमाण पत्र</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> आय प्रमाण पत्र</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> पैन कार्ड</a></li>
+                        <li><a href="#aadhaar"><i class="fas fa-chevron-right"></i> आधार से पैसा निकासी</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> ई-श्रम कार्ड</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>त्वरित लिंक</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> होम</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> सेवाएं</a></li>
+                        <li><a href="#aadhaar"><i class="fas fa-chevron-right"></i> आधार सेवाएं</a></li>
+                        <li><a href="#stationery"><i class="fas fa-chevron-right"></i> स्टेशनरी</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> संपर्क करें</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>संपर्क करें</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:7004320678"><i class="fas fa-phone-alt"></i> 7004320678</a></li>
+                        <li><a href="tel:8229055016"><i class="fas fa-phone-alt"></i> 8229055016</a></li>
+                        <li><a href="tel:8210480583"><i class="fas fa-phone-alt"></i> 8210480583</a></li>
+                        <li><a href="https://wa.me/917004320678" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Kriti Cyber & Stationery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:7004320678" class="float-btn call" aria-label="Call Now">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/917004320678?text=नमस्ते! मुझे आपकी सेवाओं के बारे में जानकारी चाहिए।" target="_blank" class="float-btn whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+
+    <script>
+        // ==================== LOADER ====================
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 800);
+        });
+
+        // ==================== NAVIGATION ====================
+        const navbar = document.getElementById('navbar');
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Mobile menu toggle
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+
+        function updateActiveNav() {
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    if (navLink) navLink.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+
+        // ==================== SCROLL TO TOP ====================
+        const scrollTop = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ==================== FADE IN ANIMATION ====================
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(el => fadeObserver.observe(el));
+
+        // ==================== CONTACT FORM ====================
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Create WhatsApp message
+            let whatsappMessage = `नमस्ते! मेरा नाम ${name} है।\n`;
+            whatsappMessage += `मोबाइल: ${phone}\n`;
+            if (service) whatsappMessage += `सेवा: ${service}\n`;
+            if (message) whatsappMessage += `संदेश: ${message}`;
+
+            // Open WhatsApp with pre-filled message
+            const whatsappUrl = `https://wa.me/917004320678?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, '_blank');
+
+            // Show success message
+            alert('धन्यवाद! आपका मैसेज WhatsApp पर भेजा दिया गया है।');
+            contactForm.reset();
+        });
+
+        // ==================== SMOOTH SCROLL ====================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ==================== SERVICE WORKER (for offline support) ====================
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Service worker registration can be added here for PWA support
+            });
+        }
+    </script>
+</body>
+
+</html>
